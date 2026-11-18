@@ -1,0 +1,43 @@
+{
+  "name": "scruple-provider-claude-cli",
+  "version": "0.1.0",
+  "description": "Scruple decision provider that answers through the logged-in Claude Code CLI, so no API key is needed.",
+  "license": "MIT",
+  "repository": "github:jaypeeZero/scruple-provider-claude-cli",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.check.json",
+    "test": "ava",
+    "lint": "eslint .",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "@scruple/core": ">=0.3.4"
+  },
+  "devDependencies": {
+    "@scruple/core": "^0.3.5",
+    "typescript": "^6.0.3",
+    "ava": "^6.4.1",
+    "tsx": "^4.23.13",
+    "eslint": "^10.4.0",
+    "@eslint/js": "^10.0.1",
+    "typescript-eslint": "^8.70.0",
+    "globals": "^17.6.0",
+    "@types/node": "^24.13.4"
+  }
+}
